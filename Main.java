@@ -4,7 +4,7 @@ public class Main {
 
     public static Scanner scan;
     public static int movesLeft = 30;
-    public static String output = "You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, book, pen, scroll, music, trumpet, piano, drum, lock. To move input direction only:north, south, east, west.";
+    public static String output = "You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, go, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, book, pen, scroll, music, trumpet, piano, drum, lock, north.";
 
     public static boolean inFoyer = true;
     public static boolean inLibrary = false;
@@ -56,7 +56,7 @@ public class Main {
     }
 
     public static void foyer() {
-        System.out.printf("%s You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have %d moves left.\n>>", output, movesLeft);
+        System.out.printf("%s You feel the warmth of blood coming out of the wound. You need to get out of here, fast. You have %d moves left.\n>>", output, movesLeft);
         scan = new Scanner(System.in);
         String test = scan.nextLine();
 
@@ -67,21 +67,26 @@ public class Main {
                 break;
 
             case "read note":
-                output = "May my light show you the way.";
+                output = "The note reads: May my light show you the way.";
                 break;
 
             case "look chest":
-                output = "the chest is closed.";
+                output = "A large ornate chest sits closed. The golden finish gleams in the soft light of the foyer.";
                 break;
 
             case "open chest":
                 chestOpen = true;
-                output = "There are matches in the chest.";
+                output = "You see a box of matches at the bottom of the chest.";
                 break;
 
             case "get matches":
-                hasMatches = true;
-                output = "You have a box of matches.";
+                if (chestOpen) {
+                    hasMatches = true;
+                    output = "You have a box of matches.";
+                }
+                else {
+                    output = "You channel all of your telekinetic abilites to channel a box of matches out of thin air. You must look like such an idiot right now.";
+                }
                 break;
 
             case "light candle":
@@ -91,7 +96,7 @@ public class Main {
                     output = "The candle is lit. You heard a metal grinding sound from the north.";
                 }
                 else {
-                    output = "You don't have any matches.";
+                    output = "You channel your fire bending powers, and focus all of your energy on the candle. You are the Avatar. You need to save the world. After an embarrasing amount of time, you decide to go find something to light the candle with.";
                 }
                 break;
 
@@ -114,15 +119,23 @@ public class Main {
                     door1Open = true;
                     output = "Wow. That door needs some WD-40. You somehow manage to open the door.";
                 }
+                else {
+                    output = "The door seems to be locked. You break out the old lock picking skills with your bobby pin. You soon realize that you don't really know how to pick a lock.";
+                }
                 break;
 
-            case "north":
+            case "go north":
                 if (door1Open) {
                     inFoyer = false;
                     inLibrary = true;
                     output = "You have left the foyer. On your way out, the door slammed and locked. You are now in the library and cannot return to the foyer. In the library there are stacks of books lining the shelves, a desk, a pen, and a scroll. There is another locked door to the north.";
                 }
+                else {
+                    output = "Can't /noclip your way out of this one buddy. The door isn't open yet.";
+                }
                 break;
+            default:
+                output = "Your vision goes spotty, and you sit down to rest. You can't think straight through all this pain.";
         }
     }
 
@@ -133,13 +146,28 @@ public class Main {
 
         switch (test) {
 
-            case "look bookshelf":
-                output = "There is a book titled 'The Autobiography of ...' with the rest of the title empty.";
+            case "look shelf":
+            case "look shelves":
+            case "look book":
+                output = "There is a book titled 'The Autobiography of ...' You always wished that somebody would write a biography on your life...";
+                break;
+
+            case "look scroll":
+                output = "A worn scroll sits on a grey pedestal in the middle of the library";
+                break;
+
+            case "look pen":
+                if (getPen) {
+                    output = "You study the pen in your hand. The weight is perfect. You will definitely be keeping this pen.";
+                }
+                if (!getPen) {
+                    output = "A beautiful fountain pen sits on a gray pedestal in the middle of the room";
+                }
                 break;
 
             case "get pen":
                 getPen = true;
-                output = "You have acquired the pen.";
+                output = "You now have a beautifully weighted fountain pen, with sleek metal sides and a beautiful grip.";
                 break;
 
             case "read scroll":
@@ -148,9 +176,14 @@ public class Main {
 
             case "write book":
             case "write name":
-                writeBook = true;
-                door2Locked = false;
-                output = "You write your name in the book. You heard a metal grinding sound from the north. But the scroll wanted your whole story, and he is definitely getting that whole story. You sit down and begin to tell your entire life story. After a couple hours, you have filled a couple books with your writing. Satisfied with your work, you put the book down.";
+                if (getPen) {
+                    writeBook = true;
+                    door2Locked = false;
+                    output = "You write your name in the book. You heard a metal grinding sound from the north. But the scroll wanted your whole story, and he is definitely getting that whole story. You sit down and begin to tell your entire life story. After a couple hours, you have filled a couple books with your writing. Satisfied with your work, you put the book down.";
+                }
+                else {
+                    output = "You want to share your life story, but you don't have anything to write with. Reminds you of that on time Andre Picazzo stole your only pencil at school.";
+                }
                 break;
 
             case "look door":
@@ -172,18 +205,24 @@ public class Main {
                     door2Open = true;
                     output = "You push the door as hard as you can, to no avail. Seems like it might be jammed shut. Oh wait... never mind, it's a pull door. You open it, thankful that you are alone, and that nobody saw your embarrassing moment.";
                 }
+                else {
+                    output = "The door is still locked. You shake the door, frustrated beyond belief. Nothing happens.";
+                }
                 break;
 
-            case "north":
-                if (door1Open) {
+            case "go north":
+                if (door2Open) {
                     inLibrary = false;
                     inConservatory = true;
                     output = " You have left the library. On your way out, the door slammed and locked. You are now in the conservatory and cannot return to the library. In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand.";
                 }
+                if (!door2Open) {
+                    output = "The door isn't open, and you can't phase through walls. Rough.";
+                }
                 break;
 
             default:
-                output = "In the library there are stacks of books lining the shelves, a desk, a pen, and a scroll. There is another locked door to the north.";
+                output = "You are losing blood fast now. You rip a strip off your shirt and attempt to bandage the wound. Your day job at Starbucks has not prepared you for this situation in the slightest.";
         }
     }
 
@@ -228,7 +267,7 @@ public class Main {
                 break;
 
             default:
-                output = "In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand.";
+                output = "You need to get out of here. Wandering around in circles and blathering about nothing isn't getting you anywhere.";
         }
     }
 }

@@ -1,103 +1,36 @@
-Successful
-
-"C:\Program Files\Java\jdk-10.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.2\lib\idea_rt.jar=51146:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\kipst\IdeaProjects\Assignment 09 Escaped\out\production\Assignment 09 Escaped" Main
+"C:\Program Files\Java\jdk-10.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.2\lib\idea_rt.jar=50300:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\kipst\IdeaProjects\Assignment 09 Escaped\out\production\Assignment 09 Escaped" Main
 Your head is pounding. You wake up in a large unfamiliar foyer, completely alone. There is a bench, a chest, and a candle. This person has a strange design sense. Did you really drink that much last night? Slowly you realize that this was not simply a drunk night. You look down at yourself in the dim light and see traces of dried blood. You were in a fight, but when? Where? You decide to stand up and create a plan to get out of this place.
 
-You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, book, pen, scroll, music, trumpet, piano, drum, lock. To move input direction only:north, south, east, west. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 30 moves left.
+You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, go, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, shelf, book, pen, scroll, music, trumpet, piano, drum, lock, north. You feel the warmth of blood coming out of the wound. You need to get out of here, fast. You have 30 moves left.
 >>open chest
-There are matches in the chest. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 29 moves left.
+You see a box of matches at the bottom of the chest. You feel the warmth of blood coming out of the wound. You need to get out of here, fast. You have 29 moves left.
 >>get matches
-You have a box of matches. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 28 moves left.
+You have a box of matches. You feel the warmth of blood coming out of the wound. You need to get out of here, fast. You have 28 moves left.
 >>light candle
-The candle is lit. You heard a metal grinding sound from the north. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 27 moves left.
+The candle is lit. You heard a metal grinding sound from the north. You feel the warmth of blood coming out of the wound. You need to get out of here, fast. You have 27 moves left.
 >>open door
-Wow. That door needs some WD-40. You somehow manage to open the door. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 26 moves left.
->>north
+Wow. That door needs some WD-40. You somehow manage to open the door. You feel the warmth of blood coming out of the wound. You need to get out of here, fast. You have 26 moves left.
+>>go north
 You have left the foyer. On your way out, the door slammed and locked. You are now in the library and cannot return to the foyer. In the library there are stacks of books lining the shelves, a desk, a pen, and a scroll. There is another locked door to the north. You have 25 moves left.
->>look bookshelf
-There is a book titled 'The Autobiography of ...' with the rest of the title empty. You have 24 moves left.
 >>get pen
-You have acquired the pen. You have 23 moves left.
+You now have a beautifully weighted fountain pen, with sleek metal sides and a beautiful grip. You have 24 moves left.
 >>write book
-You write your name in the book. You heard a metal grinding sound from the north. But the scroll wanted your whole story, and he is definitely getting that whole story. You sit down and begin to tell your entire life story. After a couple hours, you have filled a couple books with your writing. Satisfied with your work, you put the book down. You have 22 moves left.
+You write your name in the book. You heard a metal grinding sound from the north. But the scroll wanted your whole story, and he is definitely getting that whole story. You sit down and begin to tell your entire life story. After a couple hours, you have filled a couple books with your writing. Satisfied with your work, you put the book down. You have 23 moves left.
 >>open door
-You push the door as hard as you can, to no avail. Seems like it might be jammed shut. Oh wait... never mind, it's a pull door. You open it, thankful that you are alone, and that nobody saw your embarrassing moment. You have 21 moves left.
->>north
- You have left the library. On your way out, the door slammed and locked. You are now in the conservatory and cannot return to the library. In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand. You have 20 moves left.
+You push the door as hard as you can, to no avail. Seems like it might be jammed shut. Oh wait... never mind, it's a pull door. You open it, thankful that you are alone, and that nobody saw your embarrassing moment. You have 22 moves left.
+>>go north
+ You have left the library. On your way out, the door slammed and locked. You are now in the conservatory and cannot return to the library. In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand. You have 21 moves left.
 >>play trumpet
-You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet. A loud brassy screech echos around the world. You are just amazed you can still make a noise with the instrument. You have 19 moves left.
+You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet. A loud brassy screech echos around the world. You are just amazed you can still make a noise with the instrument. You have 20 moves left.
+>>play pianoo
+You need to get out of here. Wandering around in circles and blathering about nothing isn't getting you anywhere. You have 19 moves left.
 >>play piano
 You break into Beethoven's 7th symphony. Aren't you glad those piano lessons paid off?  You have 18 moves left.
 >>play drum
-
-The door opens to an eerie scene. A large open graveyard, with a light layer of fog covering the ground. You sprint out of the conservatory into the graveyard. You have no idea where you are, but at least you have left that creepy mansion. You stumble down the dirt driveway to seek medical attention. Congratulations, you survived. Now time to sue this place, you didn't sign up for this realistic of an escape room. You had 17 moves left.
-Process finished with exit code 0
-
-Failed
-
-"C:\Program Files\Java\jdk-10.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.2\lib\idea_rt.jar=51192:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\kipst\IdeaProjects\Assignment 09 Escaped\out\production\Assignment 09 Escaped" Main
-Your head is pounding. You wake up in a large unfamiliar foyer, completely alone. There is a bench, a chest, and a candle. This person has a strange design sense. Did you really drink that much last night? Slowly you realize that this was not simply a drunk night. You look down at yourself in the dim light and see traces of dried blood. You were in a fight, but when? Where? You decide to stand up and create a plan to get out of this place.
-
-You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, book, pen, scroll, music, trumpet, piano, drum, lock. To move input direction only:north, south, east, west. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 30 moves left.
->>look bench
-There is a note on the bench. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 29 moves left.
->>read note
-May my light show you the way. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 28 moves left.
->>look chest
-the chest is closed. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 27 moves left.
->>open chest
-There are matches in the chest. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 26 moves left.
->>get matches
-You have a box of matches. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 25 moves left.
->>light candle
-The candle is lit. You heard a metal grinding sound from the north. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 24 moves left.
->>look door
-The door is unlocked, but closed. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 23 moves left.
+Your mom never let you play drums as a kid. Too loud. You bang the drum with ferocity and joy. Childhood dream accomplished. You notice a loud noise from the north. Maybe it's an echo from the drum, maybe it's something else You have 17 moves left.
 >>open door
-Wow. That door needs some WD-40. You somehow manage to open the door. You feel the warmth of the blood coming out of the wound. You need to get out of here, fast. You have 22 moves left.
->>north
-You have left the foyer. On your way out, the door slammed and locked. You are now in the library and cannot return to the foyer. In the library there are stacks of books lining the shelves, a desk, a pen, and a scroll. There is another locked door to the north. You have 21 moves left.
->>look scroll
-In the library there are stacks of books lining the shelves, a desk, a pen, and a scroll. There is another locked door to the north. You have 20 moves left.
->>look bookshelf
-There is a book titled 'The Autobiography of ...' with the rest of the title empty. You have 19 moves left.
->>get book
-In the library there are stacks of books lining the shelves, a desk, a pen, and a scroll. There is another locked door to the north. You have 18 moves left.
->>get pen
-You have acquired the pen. You have 17 moves left.
->>write book
-You write your name in the book. You heard a metal grinding sound from the north. But the scroll wanted your whole story, and he is definitely getting that whole story. You sit down and begin to tell your entire life story. After a couple hours, you have filled a couple books with your writing. Satisfied with your work, you put the book down. You have 16 moves left.
->>look door
-The door is unlocked, but closed. You have 15 moves left.
->>open door
-You push the door as hard as you can, to no avail. Seems like it might be jammed shut. Oh wait... never mind, it's a pull door. You open it, thankful that you are alone, and that nobody saw your embarrassing moment. You have 14 moves left.
->>north
- You have left the library. On your way out, the door slammed and locked. You are now in the conservatory and cannot return to the library. In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand. You have 13 moves left.
->>play piano
-The piano doesn't make any noise. You silently curse those childhood piano lessons your mom made you take. You have 12 moves left.
->>play drum
-You hit the drum, but no noise comes out. Who has a broken drum in their mansion? You have 11 moves left.
->>play trumpet
-You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet. A loud brassy screech echos around the world. You are just amazed you can still make a noise with the instrument. You have 10 moves left.
->>play drum
-You hit the drum, but no noise comes out. Who has a broken drum in their mansion? You have 9 moves left.
->>play trumpet
-You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet. A loud brassy screech echos around the world. You are just amazed you can still make a noise with the instrument. You have 8 moves left.
->>play trumpet
-You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet. A loud brassy screech echos around the world. You are just amazed you can still make a noise with the instrument. You have 7 moves left.
->>play piano
-You break into Beethoven's 7th symphony. Aren't you glad those piano lessons paid off?  You have 6 moves left.
->>play trumpet
-You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet... Nothing happens. Maybe you should've stuck with band. You have 5 moves left.
->>play trumpet
-You didn't play the trumpet in 4th grade band for nothing. This creepy mansion is about to get a show. You blow into the trumpet... Nothing happens. Maybe you should've stuck with band. You have 4 moves left.
->>look music
-In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand. You have 3 moves left.
->>look sheet
-In the conservatory there are there are three instruments: a trumpet, a piano, and a drum. There is a sheet of music on a stand. You have 2 moves left.
->>read music
-Timbre, Tone, Time You have 1 moves left.
->>play piano
+You carefully read the sign next to the door before pulling it open. No pushing pull doors for you anymore. You have 16 moves left.
+>>go north
 
-You black out. As you feel yourself start to fade, you feel a hand grab your leg and begin to drag you across the floor.
+The door opens to an eerie scene. A large open graveyard, with a light layer of fog covering the ground. You sprint out of the conservatory into the graveyard. You have no idea where you are, but at least you have left that creepy mansion. You stumble down the dirt driveway to seek medical attention. Congratulations, you survived. Now time to sue this place, you didn't sign up for this realistic of an escape room. You had 15 moves left.
 Process finished with exit code 0

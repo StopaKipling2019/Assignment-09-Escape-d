@@ -272,7 +272,7 @@ public class Main {
                 break;
 
             case "open door":
-                if (!door3Locked) {
+                if (!door3Locked && !door3Open) {
                     door3Open = true;
                     output = "You carefully read the sign next to the door before pulling it open. No pushing pull doors for you anymore.";
                 }

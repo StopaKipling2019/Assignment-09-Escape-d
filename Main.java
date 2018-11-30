@@ -4,7 +4,7 @@ public class Main {
 
     public static Scanner scan;
     public static int movesLeft = 30;
-    public static String output = "You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, go, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, book, pen, scroll, music, trumpet, piano, drum, lock, north.";
+    public static String output = "You feel your abdomen. A wet warmth covers your hand. You are bleeding. Who knows how long you will last? Combine a verb and a noun to perform a move. You get 30 moves before you die. Verbs:open, go, close, light, read, write, play, look, get. Nouns:door, room, bench, chest, candle, note, matches, shelves, shelf, book, pen, scroll, music, trumpet, piano, drum, lock, north.";
 
     public static boolean inFoyer = true;
     public static boolean inLibrary = false;
@@ -24,6 +24,9 @@ public class Main {
     public static boolean playTrumpet = false;
     public static boolean playPiano = false;
     public static boolean playDrum = false;
+    public static boolean gameWon = false;
+    public static boolean door3Locked = true;
+    public static boolean door3Open = false;
 
     public static void main(String[] args) {
 
@@ -31,11 +34,11 @@ public class Main {
         for (int i = 1; i < 31; i++) {
             gameUsage();
             movesLeft--;
-            if (playTrumpet && playPiano && playDrum) {
+            if (gameWon) {
                 break;
             }
         }
-        if (playTrumpet && playPiano && playDrum) {
+        if (gameWon) {
             System.out.printf("\nThe door opens to an eerie scene. A large open graveyard, with a light layer of fog covering the ground. You sprint out of the conservatory into the graveyard. You have no idea where you are, but at least you have left that creepy mansion. You stumble down the dirt driveway to seek medical attention. Congratulations, you survived. Now time to sue this place, you didn't sign up for this realistic of an escape room. You had %d moves left.", movesLeft);
         }
         else {
@@ -247,11 +250,12 @@ public class Main {
                 break;
 
             case "play piano":
-                if (playTrumpet && !playDrum) {
+                if (playTrumpet && !playDrum && !playPiano) {
                     playPiano = true;
                     output = "You break into Beethoven's 7th symphony. Aren't you glad those piano lessons paid off? ";
                 }
                 else {
+                    playPiano = false;
                     output = "The piano doesn't make any noise. You silently curse those childhood piano lessons your mom made you take.";
                 }
                 break;
@@ -259,12 +263,25 @@ public class Main {
             case "play drum":
                 if (playTrumpet && playPiano) {
                     playDrum = true;
-                    output = "Your mom never let you play drums as a kid. Too loud. You bang the drum with ferocity and joy. Childhood dream accomplished.";
+                    door3Locked = false;
+                    output = "Your mom never let you play drums as a kid. Too loud. You bang the drum with ferocity and joy. Childhood dream accomplished. You notice a loud noise from the north. Maybe it's an echo from the drum, maybe it's something else";
                 }
                 else {
                     output = "You hit the drum, but no noise comes out. Who has a broken drum in their mansion?";
                 }
                 break;
+
+            case "open door":
+                if (!door3Locked) {
+                    door3Open = true;
+                    output = "You carefully read the sign next to the door before pulling it open. No pushing pull doors for you anymore.";
+                }
+                break;
+
+            case "go north":
+                if (door3Open) {
+                    gameWon = true;
+                }
 
             default:
                 output = "You need to get out of here. Wandering around in circles and blathering about nothing isn't getting you anywhere.";
